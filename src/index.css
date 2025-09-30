@@ -60,6 +60,90 @@
       opacity: 0;
     }
   }
+  @keyframes gradient-move {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes blob-move {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-55%, -48%) scale(1.08) rotate(8deg);
+    }
+    66% {
+      transform: translate(-45%, -52%) scale(0.95) rotate(-6deg);
+    }
+  }
+  @keyframes float-shape {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-30px) scale(1.08);
+    }
+  }
+  @keyframes float-shape2 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.05) rotate(8deg);
+    }
+  }
+  @keyframes float-shape3 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(18px) scale(1.12);
+    }
+  }
+  @keyframes bubble1 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-30px) scale(1.08);
+    }
+  }
+  @keyframes bubble2 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(20px) scale(1.04);
+    }
+  }
+  @keyframes bubble3 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-15px) scale(1.12);
+    }
+  }
+  @keyframes bubble4 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(25px) scale(1.06);
+    }
+  }
 }
 
 @layer base {
@@ -154,9 +238,120 @@
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
+.hexagon-img {
+  clip-path: polygon(
+    25% 6%, 75% 6%,
+    100% 50%,
+    75% 94%, 25% 94%,
+    0% 50%
+  );
+}
+
+.squircle-img {
+  border-radius: 35% / 28%;
+}
+
+/* Animated floating light effect behind the image */
+.floating-light {
+  position: absolute;
+  z-index: 0;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
+  background: radial-gradient(ellipse at 60% 40%, #fffbe6 0%, #ffe4e6 40%, #a5b4fc 70%, transparent 100%);
+  opacity: 0.7;
+  filter: blur(32px);
+  animation: floating-light-move 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes floating-light-move {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  30% {
+    transform: scale(1.05) translateY(-10px) rotate(8deg);
+    opacity: 0.85;
+  }
+  60% {
+    transform: scale(0.98) translateY(8px) rotate(-6deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.03) translateY(-6px) rotate(4deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes gradient-move {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradient-move 6s ease-in-out infinite;
+}
+
+.bg-aurora-gradient {
+  background: radial-gradient(ellipse 80% 60% at 50% 30%, #e0e7ff 0%, #fbc2eb 40%, #a5b4fc 70%, transparent 100%),
+              linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  filter: blur(32px);
+}
+
+@keyframes aurora-move {
+  0% {
+    background-position: 0% 50%, 100% 50%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%;
+  }
+}
+.animate-aurora {
+  background-size: 200% 200%, 200% 200%;
+  animation: aurora-move 12s ease-in-out infinite;
+  will-change: background-position;
+}
+.animate-blob-move {
+  animation: blob-move 12s ease-in-out infinite;
+}
+.animate-float-shape {
+  animation: float-shape 8s ease-in-out infinite;
+}
+.animate-float-shape2 {
+  animation: float-shape2 10s ease-in-out infinite;
+}
+.animate-float-shape3 {
+  animation: float-shape3 7s ease-in-out infinite;
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+/* Place animation utility classes OUTSIDE @theme */
+.animate-bubble1 {
+  animation: bubble1 10s ease-in-out infinite;
+}
+.animate-bubble2 {
+  animation: bubble2 12s ease-in-out infinite;
+}
+.animate-bubble3 {
+  animation: bubble3 8s ease-in-out infinite;
+}
+.animate-bubble4 {
+  animation: bubble4 14s ease-in-out infinite;
 }

@@ -3,30 +3,60 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "Piggy Pal",
+    description: "-which Is developed using React and used for students to track their budget",
+    image: "/projects/image.png",
+    tags: ["React", "TailwindCSS"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Tina mart",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+      "An E-commerce Platform I only design the ui of the login page using flutter through my internship program.",
+    image: "/projects/Screenshot 2025-09-30 004907.png",
+    tags: ["Flutter", "firebase"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "InspireHer",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "which is developed using html, css and javascript. Which generate an inspiring stories for women.",
+    image: "/projects/Screenshot 2025-09-30 005017.png",
+    tags: ["HTML", "CSS", "JAVASCRIPT"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 4,
+    title: "TenagariAndebet",
+    description:
+      "which is developed using flutter with group of 5 girl students. I was one of them for the development of the UI and the flutter. The app is developed for girls who want to report any kind of abuse, who want consultancy, petitions etc.",
+    image: "/projects/Screenshot 2025-09-30 005057.png",
+    tags: ["Flutter", "Firebase"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 5,
+    title: "Entoto",
+    description:
+      "which is developed using html, css and javascript. Which shows information about entoto hotel",
+    image: "/projects/Screenshot 2025-09-30 005133.png",
+    tags: ["HTML", "CSS", "JAVASCRIPT"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 6,
+    title: "Elderly care",
+    description:
+      "A mobile app which give information about elderly care. which is developed using flutter and firebase.",
+    image: "/projects/photo_2025-09-30_00-55-23.jpg",
+    tags: ["Flutter", "Firebase"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -100,7 +130,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/Soloparame"
           >
             Check My Github <ArrowRight size={16} />
           </a>
