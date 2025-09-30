@@ -38,7 +38,7 @@ export const HeroSection = () => {
             {/* Animated Gradient Background */}
             <div className="absolute inset-0 z-0   pointer-events-none animate-gradient-move bg-gradient-to-tr from-primary  blur-2xl opacity-80 scale-110"></div>
             <img
-              src="/public/images/photo_2025-09-29_09-17-21-removebg-preview.png"
+              src="public\images\photo_2025-09-29_09-17-21-removebg-preview.png"
               alt="Rebika Yihenew"
               className="relative z-10  transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3 hover:shadow-[0_16px_48px_rgba(80,120,255,0.35)] animate-fade-in-up"
               style={{
