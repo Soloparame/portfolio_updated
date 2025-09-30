@@ -36,11 +36,11 @@ export const HeroSection = () => {
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-center mt-10 lg:mt-0 lg:ml-4">
           <div className="relative w-100 h-90 flex items-center justify-center">
             {/* Animated Gradient Background */}
-            <div className="absolute inset-0 z-0   pointer-events-none animate-gradient-move bg-gradient-to-tr from-primary  blur-2xl opacity-80 scale-110"></div>
+            <div className="absolute inset-0 z-0 pointer-events-none animate-gradient-move bg-gradient-to-tr from-primary blur-2xl opacity-80 scale-110"></div>
             <img
-              src="public\images\photo_2025-09-29_09-17-21-removebg-preview.png"
+              src="/images/photo_2025-09-29_09-17-21-removebg-preview.png"
               alt="Rebika Yihenew"
-              className="relative z-10  transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3 hover:shadow-[0_16px_48px_rgba(80,120,255,0.35)] animate-fade-in-up"
+              className="relative z-10 transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3 hover:shadow-[0_16px_48px_rgba(80,120,255,0.35)] animate-fade-in-up"
               style={{
                 transform: "translateY(-18px)",
                 boxShadow:
